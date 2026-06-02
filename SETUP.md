@@ -54,4 +54,4 @@ Luego navegar al puerto correspondiente.
 
 - **ModuleNotFoundError**: Asegúrate de que el virtual environment esté corriendo
 - **Port already in use (8000)**: Usar `uvicorn app.main:app --reload --port 8001`
-- **TensorFlow issues**: Asegúrate de que Python 3.8 - 3.11 is used
+- **TensorFlow issues**: Asegúrate de que estás usando Python 3.8 - 3.11
