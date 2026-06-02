@@ -1,0 +1,17 @@
+{
+  "fecha_exportacion": "2026-06-01T23:15:48.493138",
+  "img_size": 256,
+  "batch_size": 4,
+  "epochs": 20,
+  "max_train_samples": 300,
+  "max_val_samples": 80,
+  "dataset": "NickBurns/amazon-sentinel2-forest-segmentation",
+  "modelo": "SmallAttentionUNet",
+  "optimizer": "Adam(1e-3)",
+  "loss": "binary_crossentropy",
+  "metricas": [
+    "rmse",
+    "accuracy",
+    "iou_metric"
+  ]
+}

@@ -1,0 +1,328 @@
+/* ===================================
+   HEADER DEL MÓDULO
+=================================== */
+
+.analysis-header {
+
+    background:
+        linear-gradient(
+            rgba(25,135,84,0.85),
+            rgba(20,108,67,0.85)
+        ),
+        url("https://images.unsplash.com/photo-1511497584788-876760111969");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+
+    padding: 90px 20px;
+}
+
+.analysis-header h1 {
+    font-size: 2.7rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.analysis-header p {
+    max-width: 850px;
+    margin: auto;
+    opacity: 0.95;
+}
+
+/* ===================================
+   TARJETAS GENERALES
+=================================== */
+
+.upload-card,
+.metrics-card,
+.preview-card {
+
+    border: none;
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    background: white;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.08);
+}
+
+/* ===================================
+   FORMULARIO
+=================================== */
+
+.upload-card h4 {
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.form-control {
+
+    border-radius: 12px;
+
+    min-height: 48px;
+}
+
+.form-control:focus {
+
+    border-color: #198754;
+
+    box-shadow:
+        0 0 0 .25rem rgba(25,135,84,.15);
+}
+
+/* ===================================
+   MÉTRICAS
+=================================== */
+
+.metrics-card h4 {
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.metric-box {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+
+    padding: 14px 16px;
+
+    border-radius: 12px;
+
+    background: #f8fafc;
+}
+
+.metric-label {
+
+    color: #6b7280;
+
+    font-weight: 500;
+}
+
+.metric-value {
+
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    color: #198754;
+}
+
+/* ===================================
+   RIESGO
+=================================== */
+
+.metric-risk {
+
+    padding: 6px 14px;
+
+    border-radius: 50px;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.risk-low {
+
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.risk-medium {
+
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.risk-high {
+
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/* ===================================
+   PREVIEW
+=================================== */
+
+.preview-card {
+
+    overflow: hidden;
+}
+
+.preview-card .card-header {
+
+    background: #198754;
+
+    color: white;
+
+    font-weight: 600;
+}
+
+.preview-card img {
+
+    max-height: 500px;
+
+    object-fit: contain;
+}
+
+/* ===================================
+   RESULTADOS
+=================================== */
+
+.result-box {
+
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 18px;
+
+    height: 100%;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+.result-box:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.12);
+}
+
+.result-box h5 {
+
+    text-align: center;
+
+    margin-bottom: 15px;
+
+    font-weight: 600;
+
+    color: #198754;
+}
+
+.result-box img {
+
+    width: 100%;
+
+    border-radius: 12px;
+}
+
+/* ===================================
+   GRID DE ANÁLISIS
+=================================== */
+
+.grid-demo {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 8px;
+
+    margin-top: 15px;
+}
+
+.grid-demo div {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 60px;
+
+    border-radius: 10px;
+
+    font-weight: 700;
+
+    color: white;
+
+    background: #198754;
+
+    transition: 0.2s;
+}
+
+.grid-demo div:hover {
+
+    transform: scale(1.05);
+}
+
+/* ===================================
+   COLORES DE EJEMPLO
+=================================== */
+
+.grid-demo div:nth-child(1),
+.grid-demo div:nth-child(4),
+.grid-demo div:nth-child(9),
+.grid-demo div:nth-child(13),
+.grid-demo div:nth-child(16) {
+
+    background: #22c55e;
+}
+
+.grid-demo div:nth-child(2),
+.grid-demo div:nth-child(3),
+.grid-demo div:nth-child(5),
+.grid-demo div:nth-child(10),
+.grid-demo div:nth-child(11),
+.grid-demo div:nth-child(14),
+.grid-demo div:nth-child(15) {
+
+    background: #f59e0b;
+}
+
+.grid-demo div:nth-child(6),
+.grid-demo div:nth-child(7) {
+
+    background: #dc2626;
+}
+
+/* ===================================
+   RESPONSIVE
+=================================== */
+
+@media(max-width: 992px){
+
+    .analysis-header h1 {
+
+        font-size: 2rem;
+    }
+
+    .preview-card img {
+
+        max-height: 350px;
+    }
+
+}
+
+@media(max-width: 768px){
+
+    .grid-demo {
+
+        gap: 5px;
+    }
+
+    .grid-demo div {
+
+        min-height: 45px;
+
+        font-size: 0.85rem;
+    }
+
+    .metric-box {
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+}

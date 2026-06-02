@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deforestación | EcoVision AI</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css'">
+    <link rel="stylesheet" href="css/deforestacion.css">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success shadow-sm">
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="/">
+                ClimaIA
+            </a>
+
+            <div class="navbar-nav ms-auto">
+
+                <a class="nav-link active" href="/deforestacion">
+                    Deforestación
+                </a>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Encabezado -->
+
+    <section class="analysis-header">
+
+        <div class="container text-center">
+
+            <h1>
+                Detección Inteligente de Deforestación
+            </h1>
+
+            <p>
+                Analice imágenes satelitales mediante Inteligencia Artificial
+                para identificar áreas afectadas por pérdida de cobertura vegetal.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Área principal -->
+
+    <section class="container py-5">
+
+        <div class="row g-4">
+
+            <!-- Panel izquierdo -->
+
+            <div class="col-lg-4">
+
+                <div class="card upload-card">
+
+                    <div class="card-body">
+
+                        <h4>Imagen Satelital</h4>
+
+                        <form id="uploadForm">
+
+                            <input
+                                type="file"
+                                id="imageInput"
+                                class="form-control mb-3"
+                                accept="image/*">
+
+                            <button
+                                type="submit"
+                                class="btn btn-success w-100">
+
+                                Analizar Imagen
+
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+                <!-- Métricas -->
+
+                <div class="card metrics-card mt-4">
+
+                    <div class="card-body">
+
+                        <h4>Resultados</h4>
+
+                        <div class="metric-box">
+
+                            <span class="metric-label">
+                                Deforestación Detectada
+                            </span>
+
+                            <span class="metric-value" id="deforestationPercentage">
+                                0 %
+                            </span>
+
+                        </div>
+
+                        <div class="metric-box">
+
+                            <span class="metric-label">
+                                Nivel de Riesgo
+                            </span>
+
+                            <span class="metric-risk risk-low" id="riskLevel">
+                                Bajo
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Panel derecho -->
+
+            <div class="col-lg-8">
+
+                <!-- Vista previa -->
+
+                <div class="card preview-card">
+
+                    <div class="card-header">
+                        Imagen cargada
+                    </div>
+
+                    <div class="card-body text-center">
+
+                        <img
+                            id="previewImage"
+                            src="https://placehold.co/800x450?text=Vista+Previa"
+                            class="img-fluid rounded">
+
+                    </div>
+
+                </div>
+
+                <!-- Resultados visuales -->
+
+                <div class="row mt-4 g-3">
+
+                    <div class="col-md-6">
+
+                        <div class="result-box">
+
+                            <h5>Mapa de Calor</h5>
+
+                            <img
+                                id="heatmapImage"
+                                src="https://placehold.co/400x300?text=Heatmap"
+                                class="img-fluid rounded">
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6">
+
+                        <div class="result-box">
+
+                            <h5>Máscara Binaria</h5>
+
+                            <img
+                                id="maskImage"
+                                src="https://placehold.co/400x300?text=Mascara"
+                                class="img-fluid rounded">
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6">
+
+                        <div class="result-box">
+
+                            <h5>Overlay</h5>
+
+                            <img
+                                id="overlayImage"
+                                src="https://placehold.co/400x300?text=Overlay"
+                                class="img-fluid rounded">
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6">
+
+                        <div class="result-box">
+
+                            <h5>Análisis Regional</h5>
+
+                            <div id="analysisGrid" class="grid-demo">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    
+    <script src="js/deforestacion.js"></script>
+
+</body>
+
+</html>
