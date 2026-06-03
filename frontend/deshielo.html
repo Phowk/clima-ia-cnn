@@ -13,23 +13,41 @@
 <body>
     <!-- Navbar -->
 
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
         <div class="container">
-
             <a class="navbar-brand fw-bold" href="/">
                 ClimaIA
             </a>
 
-            <div class="navbar-nav ms-auto">
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                <a class="nav-link active" href="/deforestacion.html">
-                    Deforestación
-                </a>
-                <a class="nav-link active" href="/deshielo.html">
-                    Deshielo
-                </a>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Inicio</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/deforestacion.html">
+                            Deforestación
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/deshielo.html">
+                            Deshielo
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/ayuda.html">
+                            Ayuda
+                        </a>
+                    </li>
+                </ul>
             </div>
-
         </div>
     </nav>
     <!-- HEADER -->
@@ -254,7 +272,7 @@
 
     </div>
 
-    <script src="../js/deshielo.js"></script>
+    <script src="/js/deshielo.js"></script>
 
 </body>
 </html>

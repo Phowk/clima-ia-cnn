@@ -50,7 +50,7 @@ Thumbs.db
 *.log
 
 # Uploads and temp files
-backend/uploads/*
+backend/app/uploads/*
 !backend/uploads/.gitkeep
 temp/
 tmp/

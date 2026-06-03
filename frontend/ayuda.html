@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClimaIA - Guía de Interpretación</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="/">
+                ClimaIA
+            </a>
+
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Inicio</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/deforestacion.html">
+                            Deforestación
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/deshielo.html">
+                            Deshielo
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/ayuda.html">
+                            Ayuda
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+
+    <section class="bg-light py-5 text-center border-bottom">
+
+        <div class="container">
+
+            <h1 class="fw-bold">
+                Guía de Interpretación de Resultados
+            </h1>
+
+            <p class="lead text-muted">
+                Aprenda a interpretar correctamente los resultados generados por ClimaIA.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- CONTENIDO -->
+
+    <div class="container py-5">
+
+        <!-- INTRO -->
+
+        <div class="card shadow-sm mb-4">
+
+            <div class="card-body">
+
+                <h3>¿Qué analiza ClimaIA?</h3>
+
+                <p>
+                    ClimaIA utiliza redes neuronales convolucionales (CNN) para identificar
+                    patrones ambientales en imágenes satelitales.
+                </p>
+
+                <p>
+                    Actualmente el sistema incluye dos módulos:
+                </p>
+
+                <ul>
+                    <li>
+                        <strong>Deforestación:</strong>
+                        detección de pérdida de cobertura vegetal.
+                    </li>
+
+                    <li>
+                        <strong>Deshielo:</strong>
+                        estimación de cambios en la cobertura de hielo.
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- MAPA DE CALOR -->
+
+        <div class="card shadow-sm mb-4">
+
+            <div class="card-body">
+
+                <h3>Mapa de Calor</h3>
+
+                <p>
+                    El mapa de calor representa las zonas donde el modelo identifica una
+                    mayor probabilidad de presencia del fenómeno analizado.
+                </p>
+
+                <ul>
+                    <li>
+                        <strong>Colores fríos:</strong>
+                        baja probabilidad.
+                    </li>
+
+                    <li>
+                        <strong>Colores intensos:</strong>
+                        alta probabilidad.
+                    </li>
+
+                </ul>
+
+                <div class="alert alert-info">
+                    El mapa de calor es una representación probabilística y no una medición exacta.
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- MÁSCARA -->
+
+        <div class="card shadow-sm mb-4">
+
+            <div class="card-body">
+
+                <h3>Máscara Generada</h3>
+
+                <p>
+                    La máscara muestra únicamente las regiones detectadas por el modelo.
+                </p>
+
+                <ul>
+                    <li>
+                        <strong>Blanco:</strong>
+                        zona detectada.
+                    </li>
+
+                    <li>
+                        <strong>Negro:</strong>
+                        zona no detectada.
+                    </li>
+                </ul>
+
+                <p>
+                    Esta vista facilita la identificación de áreas de interés sin distracciones
+                    visuales provenientes de la imagen original.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- OVERLAY -->
+
+        <div class="card shadow-sm mb-4">
+
+            <div class="card-body">
+
+                <h3>Overlay</h3>
+
+                <p>
+                    El overlay combina la imagen satelital original con el mapa de calor.
+                </p>
+
+                <p>
+                    Esta visualización permite verificar visualmente si las regiones detectadas
+                    coinciden con características observables en la imagen.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- GRID -->
+
+        <div class="card shadow-sm mb-4">
+
+            <div class="card-body">
+
+                <h3>Distribución por Zonas</h3>
+
+                <p>
+                    La imagen es dividida en una cuadrícula para calcular el porcentaje de
+                    afectación en cada región.
+                </p>
+
+                <ul>
+                    <li>
+                        Valores bajos indican poca evidencia del fenómeno.
+                    </li>
+
+                    <li>
+                        Valores altos indican una mayor concentración.
+                    </li>
+                </ul>
+
+                <p>
+                    Esta información ayuda a identificar áreas críticas dentro de una misma imagen.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- DEFORESTACIÓN -->
+
+        <div class="card shadow-sm mb-4">
+
+            <div class="card-body">
+
+                <h3>Interpretación del Módulo de Deforestación</h3>
+
+                <table class="table table-bordered">
+
+                    <thead>
+
+                        <tr>
+                            <th>Porcentaje Detectado</th>
+                            <th>Nivel de Riesgo</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>0% - 20%</td>
+                            <td>Bajo</td>
+                        </tr>
+
+                        <tr>
+                            <td>20% - 50%</td>
+                            <td>Medio</td>
+                        </tr>
+
+                        <tr>
+                            <td>Más de 50%</td>
+                            <td>Alto</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+        <!-- DESHIELO -->
+
+        <div class="card shadow-sm mb-4">
+
+            <div class="card-body">
+
+                <h3>Interpretación del Módulo de Deshielo</h3>
+
+                <table class="table table-bordered">
+
+                    <thead>
+
+                        <tr>
+                            <th>Cobertura de Hielo</th>
+                            <th>Estado</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>70% - 100%</td>
+                            <td>Conservado</td>
+                        </tr>
+
+                        <tr>
+                            <td>40% - 70%</td>
+                            <td>Vulnerable</td>
+                        </tr>
+
+                        <tr>
+                            <td>0% - 40%</td>
+                            <td>Crítico</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+        <!-- LIMITACIONES -->
+
+        <div class="card shadow-sm border-warning">
+
+            <div class="card-body">
+
+                <h3 class="text-warning">
+                    Limitaciones del Sistema
+                </h3>
+
+                <ul>
+
+                    <li>
+                        Los resultados dependen de la calidad de la imagen utilizada.
+                    </li>
+
+                    <li>
+                        Las predicciones son estimaciones basadas en datos de entrenamiento.
+                    </li>
+
+                    <li>
+                        No reemplazan estudios ambientales realizados por especialistas.
+                    </li>
+
+                    <li>
+                        Deben considerarse como una herramienta de apoyo para análisis preliminar.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
