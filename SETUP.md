@@ -35,7 +35,8 @@ pip install -r requirements.txt
 ### 4. Correr el servidor backend
 ```bash
 cd backend
-uvicorn app.main:app --reload
+cd app
+uvicorn main:app --reload
 ```
 
 La api estará disponible en `http://localhost:8000`

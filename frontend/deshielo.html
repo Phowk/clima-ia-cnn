@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClimaIA - Deshielo</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/deshielo.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="/">
+                ClimaIA
+            </a>
+
+            <div class="navbar-nav ms-auto">
+
+                <a class="nav-link active" href="/deforestacion.html">
+                    Deforestación
+                </a>
+                <a class="nav-link active" href="/deshielo.html">
+                    Deshielo
+                </a>
+            </div>
+
+        </div>
+    </nav>
+    <!-- HEADER -->
+
+    <section class="analysis-header text-center">
+
+        <div class="container">
+
+            <h1>Análisis de Deshielo Glaciar</h1>
+
+            <p>
+                Sistema basado en CNN Attention U-Net para monitorear
+                cobertura de hielo mediante imágenes satelitales.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- CONTENIDO -->
+
+    <div class="container my-5">
+
+        <div class="row g-4">
+
+            <!-- COLUMNA IZQUIERDA -->
+
+            <div class="col-lg-4">
+
+                <!-- SUBIR IMAGEN -->
+
+                <div class="upload-card p-4 mb-4">
+
+                    <h4>Cargar Imagen</h4>
+
+                    <form id="uploadForm">
+
+                        <input
+                            type="file"
+                            id="imageInput"
+                            class="form-control mb-3"
+                            accept="image/*">
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary w-100">
+
+                            Analizar Imagen
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+                <!-- MÉTRICAS -->
+
+                <div class="metrics-card p-4">
+
+                    <h4>Resultados</h4>
+
+                    <div class="metric-box">
+
+                        <span class="metric-label">
+
+                            Cobertura de Hielo
+
+                        </span>
+
+                        <span
+                            id="icePercent"
+                            class="metric-value">
+
+                            0%
+
+                        </span>
+
+                    </div>
+
+                    <div class="metric-box">
+
+                        <span class="metric-label">
+
+                            Estado
+
+                        </span>
+
+                        <span
+                            id="iceStatus"
+                            class="metric-status status-good">
+
+                            Sin analizar
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- COLUMNA DERECHA -->
+
+            <div class="col-lg-8">
+
+                <!-- PREVIEW -->
+
+                <div class="preview-card card mb-4">
+
+                    <div class="card-header">
+
+                        Imagen Analizada
+
+                    </div>
+
+                    <div class="card-body text-center">
+
+                        <img
+                            id="previewImage"
+                            src="https://placehold.co/800x500?text=Imagen+Satelital"
+                            class="img-fluid">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- RESULTADOS -->
+
+        <div class="row g-4 mt-2">
+
+            <div class="col-md-4">
+
+                <div class="result-box">
+
+                    <h5>Mapa de Calor</h5>
+
+                    <img
+                        id="heatmapImage"
+                        src="https://placehold.co/500x350?text=Heatmap">
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="result-box">
+
+                    <h5>Máscara de Hielo</h5>
+
+                    <img
+                        id="maskImage"
+                        src="https://placehold.co/500x350?text=Mask">
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="result-box">
+
+                    <h5>Overlay</h5>
+
+                    <img
+                        id="overlayImage"
+                        src="https://placehold.co/500x350?text=Overlay">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- GRID -->
+
+        <div class="row mt-4">
+
+            <div class="col-12">
+
+                <div class="result-box">
+
+                    <h5>Distribución por Zonas</h5>
+
+                    <div
+                        id="analysisGrid"
+                        class="grid-demo">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- INTERPRETACIÓN -->
+
+        <div class="row mt-4">
+
+            <div class="col-12">
+
+                <div class="result-box">
+
+                    <h5>Interpretación</h5>
+
+                    <p id="reportText">
+
+                        Cargue una imagen para iniciar el análisis.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="../js/deshielo.js"></script>
+
+</body>
+</html>

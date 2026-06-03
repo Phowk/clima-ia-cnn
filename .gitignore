@@ -75,3 +75,6 @@ htmlcov/
 # *.h5
 # *.pkl
 # *.joblib
+
+# Specific folders
+backend/app/models/export_modelo_deshielo-20260603T015551Z-3-001
