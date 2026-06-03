@@ -11,7 +11,7 @@ import base64
 
 IMG_SIZE = 256
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 MODEL_PATH = BASE_DIR / "models" / "modelo_deforestacion.keras"
 

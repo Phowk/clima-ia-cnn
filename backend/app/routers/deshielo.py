@@ -1,10 +1,12 @@
 from fastapi import APIRouter, UploadFile, File
 from pathlib import Path
-from services.deforestacion.predictor import get_model,predict_image
+from fastapi import File
+
+from services.deshielo.predictor import predict_glacier
 
 router = APIRouter(
-    prefix="/deforestacion",
-    tags=["Deforestacion"]
+    prefix="/deshielo",
+    tags=["Deshielo"]
 )
 
 UPLOAD_DIR = Path("uploads")
@@ -20,16 +22,6 @@ async def analizar(
     with open(ruta, "wb") as buffer:
         buffer.write(await imagen.read())
 
-    resultado = predict_image(ruta)
+    resultado = predict_glacier(ruta)
 
     return resultado
-
-@router.get("/test-model")
-def test_model():
-
-    model = get_model()
-
-    return {
-        "status": "ok",
-        "input_shape": str(model.input_shape)
-    }
